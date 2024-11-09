@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>상담일지 작성</title>
+    <link rel="stylesheet" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/easygpt/default.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 1.75rem;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>상담일지 작성</h1>
+
+        <!-- Card Section for Introduction -->
+        <div class="card-container">
+            <div class="card" style="width: 45%;">
+                <img src="http://gangnamseum.cafe24.com/data/editor/2006/8144f8c639bb45868c21de957b7145ef_1591628747_7932.jpg" alt="강남세움센터">
+                <div class="card-body">
+                    <h5 class="card-title">강남세움센터</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">상담일지</h6>
+                    <p class="card-text">상담을 원하시면 <a href="http://www.gnva.org" target="_blank">www.gnva.org</a> 홈페이지로 이동하세요.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 45%;">
+                <img src="http://gangnamseum.cafe24.com/data/editor/2006/8144f8c639bb45868c21de957b7145ef_1591628747_7932.jpg" alt="강남세움센터 이미지">
+                <div class="card-body">
+                    <h5 class="card-title">강남세움센터</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">상담일지</h6>
+                    <p class="card-text">상담을 원하시면 <a href="http://www.gnva.org" target="_blank">www.gnva.org</a> 홈페이지로 이동하세요.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <form>
+            <div class="mb-3">
+                <label for="counselorName" class="form-label">상담자 이름</label>
+                <input type="text" class="form-control" id="counselorName" placeholder="상담자 이름을 입력하세요" required>
+            </div>
+            <div class="mb-3">
+                <label for="clientName" class="form-label">내담자 이름</label>
+                <input type="text" class="form-control" id="clientName" placeholder="내담자 이름을 입력하세요" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">상담 날짜</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="mb-3">
+                <label for="sessionPurpose" class="form-label">상담 목적</label>
+                <textarea class="form-control" id="sessionPurpose" rows="3" placeholder="상담 목적을 간략히 작성하세요" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="sessionSummary" class="form-label">상담 내용 요약</label>
+                <textarea class="form-control" id="sessionSummary" rows="5" placeholder="상담 내용을 요약하세요" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="followUpActions" class="form-label">후속 조치</label>
+                <textarea class="form-control" id="followUpActions" rows="4" placeholder="후속 조치를 작성하세요"></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit w-100">상담일지 저장</button>
+        </form>
+    </div>
+</body>
+
+</html>
